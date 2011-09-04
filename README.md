@@ -7,18 +7,16 @@
 
 ## Installation
 
- You'll want [nib](https://github.com/visionmedia/nib) for transparent CSS3 support and helpful mixins, then you simply need to `.use()` both `nib` and `bootstrap`.
+ Bootstrap uses [nib](https://github.com/visionmedia/nib) for transparent CSS3 support and helpful mixins, but you simply need to `.use()` `bootstrap`, which in turn exposes `@import "bootstrap"`.
 
 ```js
 var stylus = require('stylus')
   , bootstrap = require('bootstrap')
-  , nib = require('nib')
   , fs = require('fs');
 
 var styl = fs.readFileSync(__dirname + '/example.styl', 'utf8');
 
 var css = stylus(styl)
-  .use(nib())
   .use(bootstrap())
   .set('filename', 'example.styl')
   .set('compress', true)
@@ -47,29 +45,6 @@ You can variables before the configuration is __@import__ed:
 radius = 5px
 @import 'bootstrap'
 ```
-
-
-Port to stylus
---------------
-
-**Javier Vizoso**
-
-+ http://github.com/blup
-
-
-Authors
--------
-
-**Mark Otto**
-
-+ http://twitter.com/mdo
-+ http://github.com/markdotto
-
-**Jacob Thornton**
-
-+ http://twitter.com/fat
-+ http://github.com/fat
-
 
 Copyright and License
 ---------------------
