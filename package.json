@@ -8,7 +8,8 @@
     "nib": "0.2.0"
   }
   , "devDependencies": {
-    "connect": "1.7.0"
+      "connect": "1.7.0"
+    , "stylus": "0.15.1"
   }
   , "main": "index"
   , "engines": { "node": "0.4.x" }
