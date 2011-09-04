@@ -254,7 +254,7 @@ footer
   // Button Base
   cursor: pointer
   display: inline-block
-  gradient-vertical-three-colors(#fff, #fff, 0.25, darken(#fff, 10))
+  background: linear-gradient(top, white, 25% white, darken(white, 10%))
   padding: 5px 14px 6px
   text-shadow: 0 1px 1px rgba(white,.75)
   color: #333
@@ -272,9 +272,7 @@ footer
 
   &.primary
     color: #fff
-    gradientBar($blue, $blueDark)
-
-  transition: .1s linear all
+    background: linear-gradient(top, $blue, $dark-blue)
 
   &.disabled
     cursor: default
