@@ -1,19 +1,52 @@
-TWITTER BOOTSTRAP
-=================
 
-Bootstrap is Twitter's toolkit for kickstarting CSS for websites, apps, and more. It includes base CSS styles for typography, forms, buttons, tables, grids, navigation, alerts, and more.
+# bootstrap-stylus
 
-This version has been ported to the awesome Stylus css language. The original version can be found here: http://twitter.github.com/bootstrap!
+  Twitter's [Bootstrap](https://github.com/twitter/bootstrap) for [Stylus](https://github.com/learnboost/stylus).
+  
+  (just started it, come back later)
 
+## Installation
 
-Developers
-----------
+ You'll want [nib](https://github.com/visionmedia/nib) for transparent CSS3 support and helpful mixins, then you simply need to `.use()` both `nib` and `bootstrap`.
 
-We have included a makefile with convenience methods for working with the bootstrap library.
+```js
+var stylus = require('stylus')
+  , bootstrap = require('bootstrap')
+  , nib = require('nib')
+  , fs = require('fs');
 
-+ **build** - `make build`
-This will run the stylus compiler on the bootstrap lib and generate a bootstrap.css and bootstrap.min.css file.
-The stylus compiler is required for this command to run. (npm install -g stylus)
+var styl = fs.readFileSync(__dirname + '/example.styl', 'utf8');
+
+var css = stylus(styl)
+  .use(nib())
+  .use(bootstrap())
+  .set('filename', 'example.styl')
+  .set('compress', true)
+  .render(function(err, css){
+    if (err) throw err;
+    console.log(css);
+  });
+```
+
+Then you can __@import__ all or portions of the library:
+
+```css
+// everything
+@import 'bootstrap'
+
+// only config and forms
+@import 'bootstrap/config'
+@import 'bootstrap/forms'
+```
+
+## Configuration
+
+You can variables before the configuration is __@import__ed:
+
+```css
+radius = 5px
+@import 'bootstrap'
+```
 
 
 Port to stylus
