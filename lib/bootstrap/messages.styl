@@ -1,4 +1,9 @@
 
+message(from, to)
+  background: linear-gradient(top, from, to)
+  text-shadow: 0 -1px 0 rgba(black, .25)
+  border-color: to to darken(from, 15%)
+
 .btn
 .alert-message
   text-shadow: 0 -1px 0 rgba(black,.25)
@@ -12,15 +17,12 @@
   &.info:hover
     color: $white
 
-  // Danger and error appear as red
   &.danger
   &.error
-    gradientBar(#ee5f5b, #c43c35)
+    message: #ee5f5b #c43c35
 
-  // Success appears as green
   &.success
-    gradientBar(#62c462, #57a957)
+    message: #62c462 #57a957
 
-  // Info appears as a neutral blue
   &.info
-    gradientBar(#5bc0de, #339bb9)
+    message: #5bc0de #339bb9
