@@ -11,8 +11,7 @@
   .fill
     background:#222
     gradient-vertical(#333, #222)
-    $shadow = 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)
-    box-shadow($shadow)
+    box-shadow: 0 1px 3px rgba(0,0,0,.25), inset 0 -1px 0 rgba(0,0,0,.1)
 
   // Links get text shadow
   a
@@ -53,24 +52,23 @@
       width: 220px
       padding: 4px 9px
       color: #fff
-      color: rgba(255,255,255,.75)
+      color: rgba(white,.75)
       border: 1px solid #111
-      border-radius(4px)
-      $shadow = inset 0 1px 2px rgba(0,0,0,.1), 0 1px 0px rgba(255,255,255,.25)
-      box-shadow($shadow)
-      transition(none)
+      border-radius: 4px
+      box-shadow: inset 0 1px 2px rgba(black,.1), 0 1px 0px rgba(white,.25)
+      transition: none
 
       // Placeholder text gets special styles can't be bundled together though for some reason
       &:-moz-placeholder
-        color: $grayLighter
+        color: $lighter-gray
 
       &::-webkit-input-placeholder
-        color: $grayLighter
+        color: $lighter-gray
 
       // Hover states
       &:hover
-        background-color: $grayLight
-        background-color: rgba(255,255,255,.5)
+        background-color: $light-gray
+        background-color: rgba(white,.5)
         color: #fff
 
       // Focus states (we use .focused since IE8 and down doesn't support :focus)
@@ -82,7 +80,7 @@
         text-shadow: 0 1px 0 #fff
         border: 0
         padding: 5px 10px
-        box-shadow(0 0 3px rgba(0,0,0,.15))
+        box-shadow: 0 0 3px rgba(0,0,0,.15)
 
   // Navigation
   ul
@@ -141,7 +139,7 @@
         a.menu
         a:hover
           background-color: #444
-          background-color: rgba(255,255,255,.1)
+          background-color: rgba(white,.1)
           *background-color: #444 /* IE6-7 */
           color: #fff
 
@@ -176,7 +174,7 @@
       border: 0
       zoom: 1
       border-radius(0 0 5px 5px)
-      box-shadow(0 1px 2px rgba(0,0,0,0.6))
+      box-shadow(0 1px 2px rgba(black,0.6))
       li
         float: none
         clear: both
@@ -192,7 +190,7 @@
           color: #bbb
           &:hover
             background-color: #333
-            background-color: rgba(255,255,255,.25)
+            background-color: rgba(white,.25)
             color: #fff
 
         // Dividers (basically an hr)
@@ -201,7 +199,7 @@
           overflow: hidden
           background: #222
           background: rgba(0,0,0,.2)
-          border-bottom: 1px solid rgba(255,255,255,.1)
+          border-bottom: 1px solid rgba(white,.1)
           margin: 5px 0
 
         // Section separaters
@@ -222,13 +220,12 @@
   margin-top: 60px
   margin-bottom: 30px
   padding: 60px
-  border-radius(6px)
+  border-radius: 6px
   h1
     margin-bottom: 0
     font-size: 60px
     line-height: 1
     letter-spacing: -1px
-
   p
     font-size: 18px
     font-weight: 200
@@ -245,7 +242,7 @@ footer
 .page-header
   margin-bottom: $baseline - 1
   border-bottom: 1px solid #ddd
-  box-shadow(0 1px 0 rgba(255,255,255,.5))
+  box-shadow: 0 1px 0 rgba(white,.5)
   h1
     margin-bottom: ($baseline / 2) - 1px
 
@@ -259,30 +256,26 @@ footer
   display: inline-block
   gradient-vertical-three-colors(#fff, #fff, 0.25, darken(#fff, 10))
   padding: 5px 14px 6px
-  text-shadow: 0 1px 1px rgba(255,255,255,.75)
+  text-shadow: 0 1px 1px rgba(white,.75)
   color: #333
   font-size: 13px
   line-height: normal
   border: 1px solid #ccc
   border-bottom-color: #bbb
-  border-radius(4px)
-  $shadow = inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)
-  box-shadow($shadow)
+  border-radius: 4px
+  box-shadow: inset 0 1px 0 rgba(white,.2), 0 1px 2px rgba(black,.05)
 
   &:hover
     background-position: 0 -15px
     color: #333
     text-decoration: none
 
-  // Primary Button Type
   &.primary
-    color:#fff
+    color: #fff
     gradientBar($blue, $blueDark)
 
-  // Transitions
-  transition(.1s linear all)
+  transition: .1s linear all
 
-  // Active and Disabled states
   &.disabled
     cursor: default
     background-image: none
@@ -296,15 +289,14 @@ footer
     opacity: .65
 
   &:active
-    $shadow = inset 0 3px 7px rgba(0,0,0,.1), 0 1px 2px rgba(0,0,0,.05)
-    box-shadow($shadow)
+    box-shadow: inset 0 3px 7px rgba(black,.1), 0 1px 2px rgba(black,.05)
 
   // Button Sizes
   &.large
     font-size: 16px
     line-height: normal
     padding: 9px 14px 9px
-    border-radius(6px)
+    border-radius: 6px
 
   &.small
     padding: 7px 9px 7px
@@ -326,11 +318,11 @@ input[type="submit"].btn
   margin-bottom: $baseline
   padding: 7px 14px
   color: $grayDark
-  text-shadow: 0 1px 0 rgba(255,255,255,.5)
+  text-shadow: 0 1px 0 rgba(white,.5)
   border-width: 1px
   border-style: solid
-  border-radius(4px)
-  box-shadow(inset 0 1px 0 rgba(255,255,255,.25))
+  border-radius: 4px
+  box-shadow: inset 0 1px 0 rgba(white,.25)
 
   // Remove extra margin from content
   h5
@@ -345,7 +337,7 @@ input[type="submit"].btn
     line-height: 28px
   .btn
     // Provide actions with buttons
-    box-shadow(0 1px 0 rgba(255,255,255,.25))
+    box-shadow: 0 1px 0 rgba(white,.25)
 
   .close
     float: right
@@ -353,7 +345,7 @@ input[type="submit"].btn
     color: $black
     font-size: 20px
     font-weight: bold
-    text-shadow: 0 1px 0 rgba(255,255,255,1)
+    text-shadow: 0 1px 0 rgba(white,1)
     opacity: .2
 
     &:hover
@@ -366,7 +358,7 @@ input[type="submit"].btn
     background-color: lighten(#fceec1, 5)
     padding: 14px
     border-color: #fceec1
-    box-shadow(none)
+    box-shadow: none
 
     p
       margin-right: 30px
@@ -378,7 +370,7 @@ input[type="submit"].btn
     &.success
     &.info
       color: $grayDark
-      text-shadow: 0 1px 0 rgba(255,255,255,.5)
+      text-shadow: 0 1px 0 rgba(white,.5)
 
     &.error
       background-color: lighten(#f56a66, 25)
@@ -410,17 +402,17 @@ input[type="submit"].btn
 // Basic Tabs
 .tabs
   width: 100%
-  border-bottom: 1px solid $grayLight
+  border-bottom: 1px solid $light-gray
   li
     a
       margin-bottom: -1px
       margin-right: 2px
       padding: 0 15px
       line-height: ($baseline * 2) - 1
-      border-radius(3px 3px 0 0)
+      border-radius: 3px 3px 0 0
       &:hover
-        background-color: $grayLighter
-        border-bottom: 1px solid $grayLight
+        background-color: $lighter-gray
+        border-bottom: 1px solid $light-gray
 
     &.active a
       background-color: #fff
@@ -437,15 +429,15 @@ input[type="submit"].btn
       padding: 0 15px
       text-shadow: 0 1px 1px #fff
       line-height: 30px
-      border-radius(15px)
+      border-radius: 15px
       &:hover
-        background: $linkColorHover
+        background: $link-color-hover
         color: #fff
         text-decoration: none
         text-shadow: 0 1px 1px rgba(0,0,0,.25)
 
     &.active a
-      background: $linkColor
+      background: $link-color
       color: #fff
       text-shadow: 0 1px 1px rgba(0,0,0,.25)
 
@@ -460,8 +452,8 @@ input[type="submit"].btn
     margin: 0
     border: 1px solid #ddd
     border: 1px solid rgba(0,0,0,.15)
-    border-radius(3px)
-    box-shadow(0 1px 2px rgba(0,0,0,.05))
+    border-radius: 3px
+    box-shadow: 0 1px 2px rgba(0,0,0,.05)
     li
       display: inline
       a
@@ -496,8 +488,8 @@ input[type="submit"].btn
   min-height: 20px
   border: 1px solid #eee
   border: 1px solid rgba(0,0,0,.05)
-  border-radius(4px)
-  box-shadow(inset 0 1px 1px rgba(0,0,0,.05))
+  border-radius: 4px
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.05)
 
 // MODALS
 // ------
@@ -522,9 +514,9 @@ input[type="submit"].btn
   border: 1px solid #999
   border: 1px solid rgba(0,0,0,.3)
   *border: 1px solid #999 /* IE6-7 */
-  border-radius(6px)
-  box-shadow(0 3px 7px rgba(0,0,0,0.3))
-  background-clip(padding-box)
+  border-radius: 6px
+  box-shadow: 0 3px 7px rgba(0,0,0,0.3)
+  background-clip: padding-box
   .modal-header
     border-bottom: 1px solid #eee
     padding: 5px 20px
@@ -543,8 +535,8 @@ input[type="submit"].btn
     background-color: #f5f5f5
     padding: 14px 20px 15px
     border-top: 1px solid #ddd
-    border-radius(0 0 6px 6px)
-    box-shadow(inset 0 1px 0 #fff)
+    border-radius: 0 0 6px 6px
+    box-shadow: inset 0 1px 0 #fff
     clearfix()
     margin-bottom: 0
     .btn
@@ -614,7 +606,7 @@ arrow-right($arrowWidth = 5px)
     text-align: center
     max-width: 200px
     text-decoration: none
-    border-radius(4px)
+    border-radius: 4px
 
   .twipsy-arrow
     position: absolute
@@ -653,20 +645,20 @@ arrow-right($arrowWidth = 5px)
     padding: 3px
     overflow: hidden
     width: 280px
-    border-radius(6px)
-    box-shadow(0 3px 7px rgba(0,0,0,0.3))
+    border-radius: 6px
+    box-shadow: 0 3px 7px rgba(0,0,0,0.3)
 
   .title
     background-color: #f5f5f5
     padding: 9px 15px
     line-height: 1
-    border-radius(3px 3px 0 0)
+    border-radius: 3px 3px 0 0
     border-bottom:1px solid #eee
 
   .content
     background-color: $white
     padding: 14px
-    border-radius(0 0 3px 3px)
-    background-clip(padding-box)
+    border-radius: 0 0 3px 3px
+    background-clip: padding-box
     p, ul, ol
       margin-bottom: 0
