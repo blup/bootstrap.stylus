@@ -1,11 +1,11 @@
 
 .container
-  width: $siteWidth
+  width: $site-width
   margin: 0 auto
   clearfix()
 
-columns($columnSpan = 1)
-  width: ($gridColumnWidth * $columnSpan) + ($gridGutterWidth * ($columnSpan - 1))
+columns($span = 1)
+  width: ($grid-column-width * $span) + ($grid-gutter-width * ($span - 1))
 
-offset($columnOffset = 1)
-  margin-left: ($gridColumnWidth * $columnOffset) + ($gridGutterWidth * ($columnOffset - 1)) + $extraSpace
+offset($offset = 1)
+  margin-left: ($grid-column-width * $column-offset) + ($grid-gutter-width * ($offset - 1)) + $extra-space
