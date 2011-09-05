@@ -1,17 +1,8 @@
-/*
- * Scaffolding.styl
- * Basic and global styles for generating a grid system, structural layout, and page templates
- * ------------------------------------------------------------------------------------------- */
-
-
-// GRID SYSTEM
-// -----------
 
 .row
   clearfix()
   margin-left: -20px
 
-  // Default columns
   .span1
   .span2
   .span3
@@ -104,12 +95,10 @@ body
   color: $gray
   text-rendering: optimizeLegibility
 
-// Container (centered, fixed-width layouts)
 .container
   width: 940px
   margin: 0 auto
 
-// Fluid layouts (left aligned, with sidebar, min- & max-width content)
 .container-fluid
   padding: 0 20px
   clearfix()
@@ -122,17 +111,13 @@ body
     max-width: 1180px
     margin-left: 240px
 
-// BASE STYLES
-// -----------
-
-// Links
 a
-  color: $linkColor
+  color: $link-color
   text-decoration: none
   line-height: inherit
   font-weight: inherit
   &:hover
-    color: $linkColorHover
+    color: $link-color-hover
     text-decoration: underline
 
 // Buttons
@@ -140,15 +125,15 @@ a
   display: inline-block
   gradient-vertical-three-colors(#fff, #fff, 0.25, darken(#fff, 10))
   padding: 4px 14px
-  text-shadow: 0 1px 1px rgba(255,255,255,.75)
+  text-shadow: 0 1px 1px rgba(white,.75)
   color: #333
   font-size: 13px
   line-height: $baseline
   border: 1px solid #ccc
   border-bottom-color: #bbb
-  border-radius(4px)
-  $shadow = inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05)
-  box-shadow($shadow)
+  border-radius: 4px
+  $shadow = inset 0 1px 0 rgba(white,.2), 0 1px 2px rgba(black,.05)
+  box-shadow: $shadow
   &:hover
     background-position: 0 -15px
     color: #333
@@ -165,20 +150,19 @@ a
 
 .btn
   //.button(#1174C6)
-  transition(.1s linear all)
   &.primary
     //#gradient > .vertical($blue, $blueDark)
     color: #fff
     text-shadow: 0 -1px 0 rgba(0,0,0,.25)
-    border-color: $blueDark $blueDark darken($blueDark, 15)
-    border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15)
+    border-color: $dark-blue $dark-blue darken($dark-blue, 15)
+    border-color: rgba(black,.1) rgba(black,.1) fadein(rgba(black,.1), 15)
     &:hover
       color: #fff
 
   &.large
     font-size: 16px
     line-height: 28px
-    border-radius(6px)
+    border-radius: 6px
 
   &.small
     padding-right: 9px
@@ -187,24 +171,21 @@ a
 
   &.disabled
     background-image: none
-    opacity(65)
+    opacity: .65
     cursor: default
-    box-shadow(none)
+    box-shadow: none
 
-  // this can't be included with the .disabled def because IE8 and below will drop it _
   &:disabled
     background-image: none
-    opacity(65)
+    opacity: .65
     cursor: default
-    box-shadow(none)
+    box-shadow: none
     &.primary
       color: #fff
 
   &:active
-    $shadow = inset 0 3px 7px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)
-    box-shadow($shadow)
+    box-shadow: inset 0 3px 7px rgba(black,.15), 0 1px 2px rgba(black,.05)
 
-// Help Firefox not be a jerk about adding extra padding to buttons
 button.btn
 input[type=submit].btn
   &::-moz-focus-inner

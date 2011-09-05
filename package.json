@@ -1,0 +1,16 @@
+{
+    "name": "bootstrap-stylus"
+  , "version": "0.0.1"
+  , "description": "Twitter's Bootstrap written with Stylus"
+  , "keywords": ["css", "stylus", "twitter", "bootstrap"]
+  , "author": "TJ Holowaychuk <tj@vision-media.ca>"
+  , "dependencies": {
+    "nib": "0.2.0"
+  }
+  , "devDependencies": {
+      "connect": "1.7.0"
+    , "stylus": "0.15.1"
+  }
+  , "main": "index"
+  , "engines": { "node": "0.4.x" }
+}

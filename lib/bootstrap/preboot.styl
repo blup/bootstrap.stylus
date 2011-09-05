@@ -1,0 +1,54 @@
+/*
+ * Preboot.styl
+ * Variables and mixins to pre-ignite any new web development project
+ * ------------------------------------------------------------------ */
+
+
+// VARIABLES
+// ---------
+
+// Links
+$link-color ?=        #0069d6
+$link-color-hover ?=  darken($link-color, 10)
+
+// Grays
+$black ?=            #000
+$dark-gray ?=        lighten($black, 25)
+$gray ?=             lighten($black, 50)
+$light-gray ?=       lighten($black, 75)
+$lighter-gray ?=     lighten($black, 90)
+$white ?=            #fff
+
+// Accent Colors
+$blue ?=              #049CDB
+$dark-blue ?=         #0064CD
+$green ?=             #46a546
+$red ?=               #9d261d
+$yellow ?=            #ffc40d
+$orange ?=            #f89406
+$pink ?=              #c3325f
+$purple ?=            #7a43b6
+
+// Baseline grid
+$basefont ?=          13px
+$baseline ?=          18px
+
+// Griditude
+$grid-columns ?=       16
+$grid-column-width ?=  40px
+$grid-gutter-width ?=  20px
+$extra-space ?=        40px
+$site-width ?=         ($grid-columns * $grid-column-width) + ($grid-gutter-width * ($grid-columns - 1))
+
+// Color Scheme
+$base-color ?=        $blue                 
+$complement ?=        spin($base-color, 180) 
+$split1 ?=            spin($base-color, 158) 
+$split2 ?=            spin($base-color, -158)
+$triad1 ?=            spin($base-color, 135) 
+$triad2 ?=            spin($base-color, -135)
+$tetra1 ?=            spin($base-color, 90)  
+$tetra2 ?=            spin($base-color, -90) 
+$analog1 ?=           spin($base-color, 22)  
+$analog2 ?=           spin($base-color, -22) 
+

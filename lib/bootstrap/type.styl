@@ -1,11 +1,3 @@
-/*
- * Typography.styl
- * Headings, body text, lists, code, and more for a versatile and durable typography system
- * ---------------------------------------------------------------------------------------- */
-
-
-// BODY TEXT
-// ---------
 
 p
   font-shorthand(normal,$basefont,$baseline)
@@ -13,9 +5,6 @@ p
   small
     font-size: $basefont - 2
     color: $grayLight
-
-// HEADINGS
-// --------
 
 h1, h2, h3, h4, h5, h6
   font-weight: bold
@@ -54,13 +43,9 @@ h5
 
 h6
   font-size: 13px
-  color: $grayLight
+  color: $light-gray
   text-transform: uppercase
 
-// COLORS
-// ------
-
-// Unordered and Ordered lists
 ul, ol
   margin: 0 0 $baseline 25px
 
@@ -96,16 +81,11 @@ dl
   dd
     margin-left: ($baseline / 2)
 
-// MISC
-// ----
-
-// Horizontal rules
 hr
   margin: 0 0 19px
   border: 0
   border-bottom: 1px solid #eee
 
-// Emphasis
 strong
   font-style: inherit
   font-weight: bold
@@ -117,9 +97,8 @@ em
   line-height: inherit
 
 .muted
-  color: $grayLight
+  color: $light-gray
 
-// Blockquotes
 blockquote
   margin-bottom: $baseline
   border-left: 5px solid #eee
@@ -147,11 +126,11 @@ code, pre
   padding: 0 3px 2px
   font-family: Monaco, Andale Mono, Courier New, monospace
   font-size: 12px
-  border-radius(3px)
+  border-radius: 3px
 
 code
   background-color: lighten($orange, 40)
-  color: rgba(0,0,0,.75)
+  color: rgba(black,.75)
   padding: 1px 3px
 
 pre
@@ -163,7 +142,7 @@ pre
   font-size: 12px
   border: 1px solid #ccc
   border: 1px solid rgba(0,0,0,.15)
-  border-radius(3px)
+  border-radius: 3px
   white-space: pre
   white-space: pre-wrap
   word-wrap: break-word
