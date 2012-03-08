@@ -1,2 +1,2 @@
 
-module.exports = require('./lib/bootstrap');
+module.exports = require('./js/bootstrap');

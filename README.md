@@ -1,9 +1,8 @@
 
-# bootstrap-stylus
+# bootstrap.stylus (v2.0.1)
 
   Twitter's [Bootstrap](https://github.com/twitter/bootstrap) for [Stylus](https://github.com/learnboost/stylus).
-  
-  (just started it, come back later)
+
 
 ## Installation
 
